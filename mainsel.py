@@ -6,7 +6,7 @@ import time
 
 
 profile = FirefoxProfile()
-profile.set_preference("browser.helperApps.neverAsk.saveToDisk", 'application/ods')
+profile.set_preference("browser.helperApps.neverAsk.saveToDisk", 'application/octet-stream')
 driver = webdriver.Firefox(firefox_profile=profile)
 
 
