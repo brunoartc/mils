@@ -16,7 +16,7 @@ payload = {'PaginaAtual': '1',
 
 r = session.post('https://sismpconsultapublica.mpsp.mp.br/ConsultarProcedimentos/ObterProcedimentos', data=payload, verify=False)
 
-r.html.render()
+#r.html.render()
 
-print(r.html)
+print(r.html.html)
 
