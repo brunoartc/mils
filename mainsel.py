@@ -22,7 +22,7 @@ btnbusca.click()
 
 driver.implicitly_wait(5)
 
-for target_list in range(100):
+for target_list in range(400):
     driver.implicitly_wait(1)
     btnbusca = driver.find_element_by_id('btnConsultar')
     btnbusca = driver.find_elements_by_class_name('botao-paginacao')
