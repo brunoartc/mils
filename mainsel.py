@@ -7,6 +7,7 @@ import time
 
 profile = FirefoxProfile()
 profile.set_preference("browser.helperApps.neverAsk.saveToDisk", 'application/octet-stream')
+profile.accept_untrusted_certs = True
 driver = webdriver.Firefox(firefox_profile=profile)
 
 
@@ -17,12 +18,16 @@ driver.implicitly_wait(3)
 
 driver.find_element_by_xpath("//select[@id='UA']/option[text()='PROMOTORIA DE JUSTIÇA DO I TRIBUNAL DO JÚRI']").click()
 btnbusca = driver.find_element_by_id('btnConsultar')
+assunto = driver.find_element_by_id('AssuntoTabUni')
+assunto.send_keys("Homicídio Simples")
+
+
 btnbusca.click()
 
 
 driver.implicitly_wait(5)
 
-for target_list in range(400):
+for target_list in range(218):
     driver.implicitly_wait(1)
     btnbusca = driver.find_element_by_id('btnConsultar')
     btnbusca = driver.find_elements_by_class_name('botao-paginacao')
