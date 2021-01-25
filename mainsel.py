@@ -28,7 +28,7 @@ driver.get('https://sismpconsultapublica.mpsp.mp.br/ConsultarProcedimentos/Obter
 
 driver.implicitly_wait(3)
 
-driver.find_element_by_xpath("//select[@id='TipoProcedimento']/option[text()='" + Preced + "']").click()
+driver.find_element_by_xpath("//select[@id='TipoProcedimento']/option[text()='" + Proced + "']").click()
 driver.find_element_by_xpath("//select[@id='UA']/option[text()='" + Unid + "']").click()
 btnbusca = driver.find_element_by_id('btnConsultar')
 assunto = driver.find_element_by_id('AssuntoTabUni')
