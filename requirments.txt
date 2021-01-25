@@ -1,1 +1,5 @@
+numpy
+pandas
+pandas-ods-reader
 selenium
+openpyxl
